@@ -31,6 +31,12 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
     }
   };
 
+  useEffect(() => {
+    if(videoRef?.current) {
+      videoRef.current.muted = isVideoMuted;
+    }
+  }, [isVideoMuted]);
+
   return (
     // console.log(post),
     <div className='flex flex-col border-b-2 border-gray-200 pb-6 lg:pl-10'>
@@ -60,7 +66,7 @@ const VideoCard: NextPage<IProps> = ({ post }) => {
 
                 </p>
                 <p className='capitalize font-medium text-xs text-gray-500 hidden md:block'>
-                  {post.postedBy.userName}
+                  {post.postedBy.userName.replace(/\s+/g, '')}
                 </p>
               </div>
             </Link>

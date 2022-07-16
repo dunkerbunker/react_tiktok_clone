@@ -71,7 +71,7 @@ const Upload = () => {
         topic,
       };
 
-      await axios.post(`http://localhost:3000/api/post`, document);
+      await axios.post(`${BASE_URL}/api/post`, document);
         
       router.push('/');
     }
