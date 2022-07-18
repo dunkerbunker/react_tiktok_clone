@@ -65,7 +65,7 @@ const Detail = ({ postDetails }: IProps) => {
     if (userProfile && comment) {
       setIsPostingComment(true);
       
-      const { data } = await axios.put(`${BASE_URL}/api/${post._id}`, {
+      const { data } = await axios.put(`${BASE_URL}/api/post/${post._id}`, {
         userId: userProfile._id,
         comment
       });
