@@ -12,5 +12,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const videos = await client.fetch(videosQuery);
 
     res.status(200).json(videos);
-  }
-}
+  
+
