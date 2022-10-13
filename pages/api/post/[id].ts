@@ -18,6 +18,7 @@ export default async function handler( req: NextApiRequest, res: NextApiResponse
     const { comment, userId } = req.body;
     const { id }: any = req.query;
 
+    
     const data = await client
       .patch(id)
       .setIfMissing({ comments: [] })
