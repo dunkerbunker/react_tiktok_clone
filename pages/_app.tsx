@@ -7,7 +7,6 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
 
   const [IsSSR, setIsSSR] = useState(true);
